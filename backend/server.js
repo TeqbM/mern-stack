@@ -1,10 +1,15 @@
-require('dotenv').config();
-let port = process.env.PORT;
-const http = require('http')
+const bcrypt = require('bcrypt');
 
-
-http.createServer(function(req,res){
-     res.writeHead(200, {'Content-Type': 'text/html'})
-     res.end('<h2 style="text-align: center;">Hello World</h2>');
-}).listen(port);
-
+// Function to hash a password
+async function hashPassword(password) {
+    const saltRounds = 10; // Adjust based on security needs (higher = more secure, but slower)
+    try {
+        const hash = await bcrypt.hash(password, saltRounds);
+        console.log(hash);
+        return hash;
+    } catch (err) {
+        console.error(err);
+        throw new Error('Error hashing password');
+    }
+}
+hashPassword("teqb@111");
