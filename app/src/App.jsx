@@ -8,6 +8,7 @@ import About from './Components/Pages/About'
 import Blog from './Components/Pages/Blog'
 import Contact from './Components/Pages/Contact'
 import Pagenotfound from './Components/Pages/Pagenotfound'
+import Signup from './Components/Users/Signup'
 
 const router =  createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router =  createBrowserRouter([
       {
         path:'/contact',
         element:<Contact />
+      },
+      {
+        path:'/signup',
+        element:<Signup />
       },
       {
         path:'*',

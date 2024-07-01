@@ -13,6 +13,7 @@ function Header(){
                               <li><NavLink to="/about">About us</NavLink></li>
                               <li><NavLink to="/blog">Blog</NavLink></li>
                               <li><NavLink to="/contact">Contact us</NavLink></li>
+                              <li><NavLink to="/signup">Create Account</NavLink></li>
                          </ul>
                     </nav>
                </Container>

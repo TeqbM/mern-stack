@@ -7,7 +7,7 @@ const Input = forwardRef( function Input({
 }, ref){
      return(
           <div className='mt-3'>
-               <input type={type} ref={ref} {...props} />
+               <input type={type} ref={ref} {...props}  className=''/> 
           </div>
      )
 });
