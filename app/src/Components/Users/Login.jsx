@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Login() {
   
   const [username, setUsername] = useState('teqM')
-  const [pass, setPass] = useState('teqb@111')
+  const [pass, setPass] = useState('')
   const [errorMessage, setErrorMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate()

@@ -6,10 +6,10 @@ body{
      @apply text-lg;
 }
 .btn{
-     @apply py-2 px-5 rounded-md bg-sky-200 border border-sky-300 text-sky-600 transition-all hover:bg-sky-600 hover:text-sky-100 
+     @apply py-2 px-5 rounded-md bg-sky-200 border inline-block border-sky-300 text-sky-600 transition-all hover:bg-sky-600 hover:text-sky-100 
 }
 .cart{
-     @apply p-4 border rounded-md
+     @apply p-4 border rounded-md relative
 }
 input{
      @apply py-2 px-3 w-full rounded-md border
@@ -22,4 +22,11 @@ input{
 }
 .menu li:not(:last-child){
      @apply mr-10
+}
+.badge{
+     @apply absolute bg-sky-500 px-2 rounded-3xl text-sm text-white right-2 top-2 border border-sky-700
+}
+.stressed-linked::after{
+     content: '';
+     @apply absolute inset-0 rounded-md z-20
 }
