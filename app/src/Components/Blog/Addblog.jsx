@@ -8,12 +8,15 @@ export default function Addblog() {
      const blogUrl = import.meta.env.VITE_GET_POST;
 
      useEffect(() =>{
-          axios.get(blogUrl).then((response)=>{
-               setPost(response.data);
-          })
+          try {
+               axios.get(blogUrl).then((response)=>{
+                    setPost(response.data);
+               })
+          } catch (error) {
+               console.log(error.message);
+          }
           
      },[])
-     
      
      const getDateFormat =(date) =>{
           const dateObject = new Date(date);
