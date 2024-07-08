@@ -10,6 +10,7 @@ import Contact from './Components/Pages/Contact'
 import Pagenotfound from './Components/Pages/Pagenotfound'
 import Signup from './Components/Users/Signup'
 import Post from './Components/Blog/Post'
+import AppDashboard from './Components/Pages/AppDashboard'
 
 const router =  createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router =  createBrowserRouter([
       {
         path:'/signup',
         element:<Signup />
+      },
+      {
+        path:'/dashboard',
+        element:<AppDashboard />
       },
       {
         path:'*',

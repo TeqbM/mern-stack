@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 body{
-     @apply text-lg;
+     @apply text-lg font-mono;
 }
 .btn{
-     @apply py-2 px-5 rounded-md bg-sky-200 border inline-block border-sky-300 text-sky-600 transition-all hover:bg-sky-600 hover:text-sky-100 
+     @apply py-2 px-5 cursor-pointer rounded-md bg-sky-200 border inline-block border-sky-300 text-sky-600 transition-all hover:bg-sky-600 hover:text-sky-100 
 }
 .cart{
      @apply p-4 border rounded-md relative

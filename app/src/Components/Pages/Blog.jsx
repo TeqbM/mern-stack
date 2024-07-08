@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from '../Atoms/Section';
 import Container from '../Atoms/Container';
-import Addblog from '../Blog/Addblog';
+import AllPost from '../Blog/AllPost';
 
 
 export default function Blog() {
@@ -10,8 +10,8 @@ export default function Blog() {
   return (
     <>
     <Section>
-      <Container>
-        <Addblog />
+      <Container className='mb-12'>
+        <AllPost />
         
       </Container>
     </Section>

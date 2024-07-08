@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <Section>
         <Container>
-            <Login />
+            
         </Container>
     </Section>
   )
