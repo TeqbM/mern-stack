@@ -5,6 +5,8 @@ const app = express();
 const cors = require('cors');
 const data = require('./blog.json');
 
+const fs = require('fs');
+
 app.use(express.urlencoded({ extended: false}));
 app.use(cors());
 
@@ -16,6 +18,7 @@ app.get('/blog', (req, res) => {
           res.status(500).json({ message: 'Error fetching data' });
      }
 })
+
 app.get('/blog/:title', (req, res) => {
      let getTitle = req.params.title
 
@@ -30,10 +33,13 @@ app.get('/blog/:title', (req, res) => {
      }
 })
 
-app.post('/', (req, res) => {
-     let bodyd = [req.body];
-     console.table(bodyd);
-     res.json({ message:"pending"})
+app.post('/blog/add', (req, res) => {
+     let bodyd = req.body;
+     data.push({id: Date.now(), ...bodyd}) 
+     fs.writeFile('./blog.json', JSON.stringify(data), (err,blogpost)=>{
+          if(err) throw err;
+          return res.json({ message:"post added successfully"})
+     })     
 })
 
 
